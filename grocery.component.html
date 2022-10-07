@@ -1,0 +1,28 @@
+<table class="table table-hover">
+<thead class="thread-dark">
+    <tr>
+        <th>groceryId</th>
+        <th>grocery Category</th>
+        <th>Actions</th>
+        
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let x of gservice.grocerycategorylist">
+        <td>{{x.groceryId}}</td>
+        <td>{{x.groceryCategory}}</td>
+        <td>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Actions
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li ><a class="dropdown-item" href="#"(click)="deleteGroceryCategory(x.groceryId)">delete</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+
+ 
+</tbody>
+</table>
